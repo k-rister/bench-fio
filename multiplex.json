@@ -23,7 +23,7 @@
     "validations": {
     "size_BKMG" : {
         "description" : "bytes in B/k/M/G, converted to K, shown in k",
-        "args" : [ "bs", "filesize", "io_size", "mem", "size" ],
+        "args" : [ "ba", "bs", "filesize", "io_size", "mem", "size" ],
         "vals": "^(([1-9][0-9]*\\.?[0-9]*)|(0?\\.[0-9]+)).*[BKMG]?",
         "convert": "K",
         "transform": {
@@ -94,7 +94,7 @@
             "pre_read", "randrepeat", "rate_ignore_thinktime", "replay_no_stall",
             "scramble_buffers", "serialize_overlap", "stats", "sync", "trim_verify_zero",
             "unified_rw_reporting", "unique_filename", "unlink_each_loop", "unlink",
-            "verify_dump", "erify_fatal", "verify_state_load", "verify_state_save",
+            "verify_dump", "verify_fatal", "verify_state_load", "verify_state_save",
            "time_based"
         ],
         "vals" : "[0,1]"
@@ -102,9 +102,9 @@
     "positive_integer" : {
         "description" : "a whole number greater than 0",
         "args" : [
-            "ba", "buffer_compress_chunk", "buffer_compress_percentage",
+            "buffer_compress_chunk", "buffer_compress_percentage",
             "bwavgtime", "cgroup_weight", "cpumask", "dedupe_percentage", "fdatasync", "flow_id",
-            "flow_sleep", "flow", "flow_watermark", "fsync", "gia", "gtod_cpu", "hugepage-size",
+            "flow_sleep", "flow", "flow_watermark", "fsync", "gid", "gtod_cpu", "hugepage-size",
             "iodepth_batch_complete_max", "iodepth_batch_complete_min", "iodepth_batch",
             "iodepth_low", "iodepth", "iopsavgtime", "kb_base", "log_avg_msec", "log_compression",
             "log_hist_coarseness", "log_hist_msec", "loops", "nice", "nrfiles", "numjobs",
