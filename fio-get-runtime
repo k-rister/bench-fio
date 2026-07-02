@@ -8,7 +8,15 @@ while true; do
     case "$1" in
         --runtime)
             shift
-            echo $1 | sed -e 's/s//'
+            val="$1"
+            if echo "${val}" | grep -q 'h$'; then
+                val=$(( ${val%h} * 3600 ))
+            elif echo "${val}" | grep -q 'm$'; then
+                val=$(( ${val%m} * 60 ))
+            else
+                val="${val%s}"
+            fi
+            echo "${val}"
             shift
             ;;
         --)
